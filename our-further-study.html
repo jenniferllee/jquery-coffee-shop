@@ -93,8 +93,8 @@
 
     function revenue() {
         var total = 0;
-        for (var i = 0; i < drinksOrdered.length; i++) {
-            var drink = drinksOrdered[i];
+        for (var drink of drinksOrdered) {
+            // var drink = drinksOrdered[i];
             total = total + prices[drink];
         }
         return total.toFixed(2);
