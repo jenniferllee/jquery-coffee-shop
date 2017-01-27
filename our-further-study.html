@@ -80,14 +80,23 @@
 
         myRevenueMessage.html("$" + revenue());
 
-        myImage.attr('src', 'static/coffee_machine.jpg');
+        myImage.fadeOut(function() {
+            myImage.attr('src', 'static/coffee_machine.jpg');
+            myImage.fadeIn();
+        });
 
         mug = setTimeout(function() {
-            myImage.attr('src', 'static/coffee_mug.jpg');
+            myImage.fadeOut(function() {
+                myImage.attr('src', 'static/coffee_mug.jpg');
+                myImage.fadeIn();
+            });            
         } , 1500);
 
         beans = setTimeout(function() {
-            myImage.attr('src', 'static/coffee_beans.jpg');
+            myImage.fadeOut(function() {
+                myImage.attr('src', 'static/coffee_beans.jpg');
+                myImage.fadeIn();
+            });            
         } , 4000);
     }
 
